@@ -10,13 +10,19 @@ package firstprogram;
  *
  * @author joronia17
  */
+import java.util.Scanner;
 public class FirstProgram {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-       System.out.println("Holla Mundo!"); // TODO code application logic here
+        String name = "Jose";
+        //double score = 42.5;
+       System.out.printf("Hello %s is your score:", name); // TODO code application logic here
+       Scanner input = new Scanner(System.in);
+       int score = input.nextInt();
+       System.out.printf("Your Score is %d\n", score);
     }
     
 }
