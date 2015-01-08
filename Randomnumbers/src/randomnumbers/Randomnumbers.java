@@ -22,8 +22,10 @@ public class Randomnumbers {
     public static void main(String[] args) {
 
         for (int i = 0; i < 25; i++){
+            //PT: should create this outside of the loop (so it's only done once) -1
              Random num = new Random();
        int x = num.nextInt(200);
+       //PT: And you only need one Random object. -4
        Random num1 = new Random();
        int y = num1.nextInt(200);
        if (x > y) {
