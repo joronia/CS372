@@ -20,7 +20,7 @@ public class Areacircle {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-       final double PI = 3.14;
+       final double PI = 3.14;  //PT: use java.lang.Math.PI instead
        System.out.println("What is the radius of the circle?");
        Scanner radius = new Scanner(System.in);
        double user = radius.nextDouble();
