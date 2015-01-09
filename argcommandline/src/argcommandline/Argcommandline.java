@@ -21,7 +21,7 @@ public class Argcommandline {
      */
     public static void main(String[] args) {
         
-        if(args.length < 3) {
+        if(args.length < 3) { //PT: Take care that the code formatting looks good
 System.out.println("Need 3 arguments");
 System.exit(1);
         }

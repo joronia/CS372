@@ -45,6 +45,7 @@ Temporary Items
 /FirstProgram/build/
 /DataOnly(Problems2.3-2.4)/nbproject/private/
 /DataOnly(Problems2.3-2.4)/build/
+<<<<<<< HEAD
 /argcommandline/nbproject/private/
 /argcommandline/build/
 /areacircle/nbproject/private/
@@ -66,3 +67,9 @@ Temporary Items
 /guipi/dist/
 /HomeworkTracker/nbproject/private/
 /HomeworkTracker/build/
+=======
+/TemperatureConverter/nbproject/private/
+/TemperatureConverter/build/
+/CalculatingPI/nbproject/private/
+/CalculatingPI/build/
+>>>>>>> origin/master
