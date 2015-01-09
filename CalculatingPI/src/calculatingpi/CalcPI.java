@@ -10,10 +10,17 @@ package calculatingpi;
  *
  * @author joronia17
  */
+/**
+ * Class that contains all methods for object CalcPI. 
+ * @author joronia17
+ */
 public class CalcPI {
     private final double pi = 4.0;
     private double term = 0;
-    
+    /**
+     * For loop to calculate infinite series. Prints out the exact number for that number.
+     * @param n 
+     */
     public void calculatepi(int n) {
         int f = 1;
         for (int i = 1; i < n; i+=2) {
