@@ -51,36 +51,8 @@ public class guiPiclass {
         usernumber = c;
     }
 
-    /**
-     * Main method to show the answer for the infinite series. Starts with f= 1
-     * then initializes term to zero. Goes through the loop till the last term
-     * of usernumber. uses the calculation to return term.
-     *
-     * @param usernumber
-     * @return
+   
 
-    
-/**
- *  Set c to equal to usernumber from method of setnum().
- * @param c 
- */
-    public guiPiclass(double c) {
-        setnum(c);
-    }
-/**
- * Method to return the number the user entered in the program.
- * @return usernumber
- */
-    public double getpi() {
-        return usernumber;
-    }
-/**
- * Same as the other code set c to equal to usernumber.
- * @param c 
- */
-    public void setnum(double c) {
-        usernumber = c;
-    }
 /**
  * Main method to show the answer for the infinite series. Starts with f= 1 then
  * initializes term to zero. Goes through the loop till the last term of usernumber.
