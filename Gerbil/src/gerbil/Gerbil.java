@@ -29,14 +29,6 @@ public class Gerbil {
     }
 
 
-    /**
-     * Method tostring() to bring back a string.
-     *
-     * @return a line of string and int.
-     */
-    public String toString() {
-        return "Gerbil " + gerbilNumber;
-    }
 
     /**
      * Method for hop to just output the method toString() + is hopping.
