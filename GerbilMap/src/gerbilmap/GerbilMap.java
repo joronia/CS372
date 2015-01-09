@@ -11,11 +11,13 @@ import java.util.*;
  * @author Jose
  */
 public class GerbilMap {
+
     /**
      * Main program. Created a Hashmap object and then put all the objects in a
      * map then i set up a iterator to find the key. Then do the while to output.
      * @param args 
      */
+
     public static void main(String[] args) {
         HashMap map = new HashMap();
         map.put("John", new Gerbil(1));

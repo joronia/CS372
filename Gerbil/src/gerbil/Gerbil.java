@@ -9,6 +9,7 @@ package gerbil;
  *
  * @author Jose
  */
+
 /**
  * Class to add all methods for a Gerbil object.
  */
@@ -22,9 +23,11 @@ public class Gerbil {
      *
      * @param i
      */
+
     public Gerbil(int i) {
         gerbilNumber = i;
     }
+
 
     /**
      * Method tostring() to bring back a string.
@@ -38,6 +41,11 @@ public class Gerbil {
     /**
      * Method for hop to just output the method toString() + is hopping.
      */
+
+    public String toString() {
+        return "Gerbil " + gerbilNumber;
+    }
+
     public void hop() {
         System.out.println(toString() + " is hopping");
     }

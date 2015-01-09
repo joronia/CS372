@@ -45,7 +45,31 @@ Temporary Items
 /FirstProgram/build/
 /DataOnly(Problems2.3-2.4)/nbproject/private/
 /DataOnly(Problems2.3-2.4)/build/
+<<<<<<< HEAD
+/argcommandline/nbproject/private/
+/argcommandline/build/
+/areacircle/nbproject/private/
+/areacircle/build/
+/Randomnumbers/nbproject/private/
+/Randomnumbers/build/
+/PrimeNumbers/nbproject/private/
+/PrimeNumbers/build/
+/areacircle/dist/
+/argcommandline/dist/
+/Randomnumbers/dist/
+/PrimeNumbers/dist/
+/Gerbil/nbproject/private/
+/Gerbil/build/
+/GerbilMap/nbproject/private/
+/GerbilMap/build/
+/guipi/nbproject/private/
+/guipi/build/
+/guipi/dist/
+/HomeworkTracker/nbproject/private/
+/HomeworkTracker/build/
+=======
 /TemperatureConverter/nbproject/private/
 /TemperatureConverter/build/
 /CalculatingPI/nbproject/private/
 /CalculatingPI/build/
+>>>>>>> origin/master

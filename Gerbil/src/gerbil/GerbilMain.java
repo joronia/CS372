@@ -5,14 +5,18 @@
  */
 package gerbil;
 
+
 import java.util.*;
 import java.util.ArrayList;
+
+
 
 /**
  *
  * @author Jose
  */
 public class GerbilMain {
+
 
     /**
      * Main program. Create a vector to add all gerbil objects. Then use a
