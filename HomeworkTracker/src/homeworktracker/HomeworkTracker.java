@@ -23,7 +23,6 @@ public class HomeworkTracker {
         return scores.get(i);
     }
 
-    ;
 
 public void gradelist(double grade) {
         scores.add(grade);
@@ -40,9 +39,14 @@ public void gradelist(double grade) {
         return min;
     }
 
-    public double max(double scores) {
-        double max;
-        max = Math.max(scores, scores);
+    public double max() {
+        if (scores.size() == 0) {
+            return -1;
+        }
+        double max = scores.get(0);
+        for (int i = 1; i < scores.size(); i++) {
+        max = Math.max(max, scores.get(i));
+    }
         return max;
     }
 
