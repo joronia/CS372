@@ -22,6 +22,9 @@ public class HomeworkTracker {
     public double getgrade(int i) {
         return scores.get(i);
     }
+    
+    public ArrayList<Double> getscores() { return scores; }
+    //public void addscore(double s) {scores.add(s); }
 
 
 public void gradelist(double grade) {
