@@ -12,7 +12,7 @@ package calculatingpi;
  */
 public class CalculatingPI {
 
-    /**
+    /** Main to use in command prompt
      * @param args the command line arguments
      */
     public static void main(String[] args) {

@@ -11,24 +11,57 @@ import java.util.*;
  *
  * @author Jose
  */
+/**
+ * A class object to add all methods that go with the object HomeworkTracker
+ *
+ * @author joronia17
+ */
 public class HomeworkTracker {
 
     ArrayList<Double> scores = new ArrayList();
 
-    public HomeworkTracker(double c) {
-        scores.add(c);
+    /**
+     * empty constructor to initialize object
+     */
+    public HomeworkTracker() {
+
     }
 
+    /**
+     * return whats in each ArrayList.
+     *
+     * @param i
+     * @return scores.get(i);
+     */
     public double getgrade(int i) {
         return scores.get(i);
     }
 
-    ;
+    /**
+     * Return each grade.
+     *
+     * @return scores
+     */
+    public ArrayList<Double> getscores() {
+        return scores;
+    }
+    //public void addscore(double s) {scores.add(s); }
 
-public void gradelist(double grade) {
+    /**
+     * Add all the grades into ArrayList scores to use.
+     *
+     * @param grade
+     */
+    public void gradelist(double grade) {
         scores.add(grade);
     }
 
+    /**
+     * Method to calculate the minimum score of all grades being entered to the
+     * list.
+     *
+     * @return min
+     */
     public double min() {
         if (scores.size() == 0) {
             return -1;
@@ -40,26 +73,35 @@ public void gradelist(double grade) {
         return min;
     }
 
-    public double max(double scores) {
-        double max;
-        max = Math.max(scores, scores);
+    /**
+     * Method to calculate the max number out of all grades.
+     *
+     * @return max
+     */
+    public double max() {
+        if (scores.size() == 0) {
+            return -1;
+        }
+        double max = scores.get(0);
+        for (int i = 1; i < scores.size(); i++) {
+            max = Math.max(max, scores.get(i));
+        }
         return max;
     }
 
+    /**
+     * Method to calculate the average scores from all student grades.
+     *
+     * @return average
+     */
     public double average() {
         double average = 0;
-        for (int i = 0; i <= scores.size(); i++) {
+        for (int i = 0; i < scores.size(); i++) {
             average += scores.get(i);
+            //average = average / scores.size();
         }
         average = average / scores.size();
         return average;
-    }
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
     }
 
 }
