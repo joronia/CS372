@@ -177,7 +177,7 @@ public class guicookiesale extends javax.swing.JFrame {
                  j.soldthinmints(c));
         jLabel1.setText(f);
 
-        String g = String.format("Total: %f",
+        String g = String.format("Total: $%f",
                  j.totalthinmints(c));
         jLabel2.setText(g);
 
@@ -192,7 +192,7 @@ public class guicookiesale extends javax.swing.JFrame {
                  j.soldsamoas(d));
         jLabel3.setText(z);
 
-        String a = String.format("Total: %f",
+        String a = String.format("Total: $%f",
                  j.totalsamoas(d));
         jLabel4.setText(a);
     }//GEN-LAST:event_jButton2ActionPerformed
@@ -205,7 +205,7 @@ public class guicookiesale extends javax.swing.JFrame {
                  j.soldchocolatechip(b));
         jLabel5.setText(s);
 
-        String c = String.format("Total: %f",
+        String c = String.format("Total: $%f",
                  j.totalchocolatechip(b));
         jLabel6.setText(c);
     }//GEN-LAST:event_jButton3ActionPerformed
