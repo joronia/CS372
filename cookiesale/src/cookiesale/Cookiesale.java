@@ -18,55 +18,58 @@ public Cookiesale(int n) {
 
 public void soldthinmints(int quanity) {
     int amountsold = 0;
-    for (int i = 0; i < quanity; i++) {
-        amountsold++;
-    }
+    
+        amountsold = quanity;
+    
     System.out.print(amountsold);
 }
 
 public void soldsamoas(int quanity) {
     int amountsold1 = 0;
-    for (int n = 0; n < quanity; n++ ) {
-        amountsold1++;
-    }
+    
+        amountsold1 = quanity;
+    
     System.out.print(amountsold1);
 }
 
 public void soldchocolatechip(int quanity) {
     int amountsold2 = 0;
-    for (int j =0; j < quanity; j++ ) {
-        amountsold2++;
-    }
+    
+       amountsold2 = quanity;
+    
     System.out.print(amountsold2);
 }
 
 public void totalthinmints(int quanity) {
     double moneymade = 0.00;
-    for (int y = 0; y <= quanity; y++) {
-        moneymade = 3.00 * y;
-    }
+    
+        moneymade = 3.00 * quanity;
+    
     System.out.print(moneymade);
 }
 
 public void totalsamoas(int quanity) {
     double moneymade1 = 0.00;
-    for (int p = 0; p <= quanity; p++) {
-        moneymade1 = 3.00 * p;
-    }
+    
+        moneymade1 = 3.00 * quanity;
+    
     System.out.print(moneymade1);
 }
 
 public void totalchocolatechip(int quanity) {
     double moneymade2 = 0.00;
-    for (int a = 0; a <= quanity; a++) {
-        moneymade2 = 3.00 * a;
+    
+        moneymade2 = 3.00 * quanity;
         
-    }
+    
     
     System.out.print(moneymade2);
 }
     public static void main(String[] args) {
-        
+        Cookiesale j = new Cookiesale(0);
+        j.soldchocolatechip(5);
+        j.totalchocolatechip(5);
+        j.totalchocolatechip(5);
     }
     
 }
