@@ -10,66 +10,65 @@ package cookiesale;
  * @author Jose
  */
 public class Cookiesale {
-private int quanity;
 
-public Cookiesale(int n) {
-    quanity = n;
-}
+    private int quanity;
 
-public void soldthinmints(int quanity) {
-    int amountsold = 0;
-    
-        amountsold = quanity;
-    
-    System.out.print(amountsold);
-}
-
-public void soldsamoas(int quanity) {
-    int amountsold1 = 0;
-    
-        amountsold1 = quanity;
-    
-    System.out.print(amountsold1);
-}
-
-public void soldchocolatechip(int quanity) {
-    int amountsold2 = 0;
-    
-       amountsold2 = quanity;
-    
-    System.out.print(amountsold2);
-}
-
-public void totalthinmints(int quanity) {
-    double moneymade = 0.00;
-    
-        moneymade = 3.00 * quanity;
-    
-    System.out.print(moneymade);
-}
-
-public void totalsamoas(int quanity) {
-    double moneymade1 = 0.00;
-    
-        moneymade1 = 3.00 * quanity;
-    
-    System.out.print(moneymade1);
-}
-
-public void totalchocolatechip(int quanity) {
-    double moneymade2 = 0.00;
-    
-        moneymade2 = 3.00 * quanity;
-        
-    
-    
-    System.out.print(moneymade2);
-}
-    public static void main(String[] args) {
-        Cookiesale j = new Cookiesale(0);
-        j.soldchocolatechip(5);
-        j.totalchocolatechip(5);
-        j.totalchocolatechip(5);
+    public Cookiesale(int n) {
+        setnum(n);
     }
+    public void setnum(int n) {
+        quanity = n;
+    }
+    public int getquanity() { return quanity; }
+ 
+    public int soldthinmints(int quanity) {
+        int amountsold = 0;
+
+        amountsold = quanity;
+
+        return amountsold;
+    }
+
+    public int soldsamoas(int quanity) {
+        int amountsold1 = 0;
+
+        amountsold1 = quanity;
+
+        return amountsold1;
+    }
+
+    public int soldchocolatechip(int quanity) {
+        int amountsold2 = 0;
+
+        amountsold2 = quanity;
+
+        return amountsold2;
+    }
+
+    public double totalthinmints(int quanity) {
+        double moneymade = 0.00;
+
+        moneymade = 3.00 * quanity;
+
+        return moneymade;
+    }
+
+    public double totalsamoas(int quanity) {
+        double moneymade1 = 0.00;
+
+        moneymade1 = 4.00 * quanity;
+
+        return moneymade1;
+    }
+
+    public double totalchocolatechip(int quanity) {
+        double moneymade2 = 0.00;
+
+        moneymade2 = 5.00 * quanity;
+
+        return moneymade2;
+    }
+
     
+
 }
