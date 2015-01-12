@@ -14,7 +14,7 @@ package gerbil;
  * Class to add all methods for a Gerbil object.
  */
 public class Gerbil {
-
+    //PT - since you use ++gerbilCounter later, you should probably initialize this here.
     private static int gerbilCounter;
     private int gerbilNumber = ++gerbilCounter;
 
