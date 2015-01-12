@@ -28,6 +28,9 @@ public class CalcPI {
             f = f * -1;
             
         }
+        
+        //PT -- this function should probably return term, and the output
+        //      should happen in main. -2
         System.out.print("The infinite series of the " + n + " term is " + term);
     }
 }

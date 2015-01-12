@@ -16,6 +16,7 @@ public class CalculatingPI {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        //PT -- The args.length check should be done here, not later.
         Integer i = Integer.parseInt(args[0]);
 //        
 //        System.out.println(i.toString()); 

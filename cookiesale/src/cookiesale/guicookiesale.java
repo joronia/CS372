@@ -179,6 +179,7 @@ public class guicookiesale extends javax.swing.JFrame {
 
         String f = String.format("%d items sold to date",
                 j.soldthinmints(c));
+        //PT -- name these variables something more meaningful
         jLabel1.setText(f);
 
         String g = String.format("Total earned: $%.2f",
