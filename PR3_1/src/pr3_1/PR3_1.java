@@ -12,6 +12,10 @@ package pr3_1;
 public class PR3_1 {
 
     /**
+     * Main area to run program. Created a new object names n from class
+     * userinput. Then used all my methods with my new object. Exception shows
+     * when user enters something other than a integer.
+     *
      * @param args the command line arguments
      */
     public static void main(String[] args) {
@@ -21,7 +25,7 @@ public class PR3_1 {
             int d = n.min();
             System.out.println("The minimum for you're numbers are: " + d);
             int a = n.max();
-            System.out.println("The maxinum for you're numbers are: " + a);
+            System.out.println("The maximum for you're numbers are: " + a);
             double b = n.average();
             System.out.println("The average for you're numbers are: " + b);
         } catch (Exception ex) {
