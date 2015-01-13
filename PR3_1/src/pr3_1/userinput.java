@@ -14,21 +14,21 @@ import java.util.*;
 public class userinput {
 
     Scanner user = new Scanner(System.in);
-    ArrayList<Double> human = new ArrayList();
+    ArrayList<Integer> human = new ArrayList();
 
     public void askuser() {
         for (int i = 0; i < 10; i++) {
 
-            System.out.print(i + "Enter 10 Interger numbers!");
-            double numbers = user.nextDouble();
+            System.out.print("Enter 10 Interger numbers!");
+            Integer numbers = user.nextInt();
             human.add(numbers);
         }
         
     
     }
     
-    public Double min() {
-        Double d = Double.MAX_VALUE;
+    public Integer min() {
+        Integer d = Integer.MAX_VALUE;
         for (int i = 0; i < human.size(); i++) {
             d = Math.min(d,human.get(i));
         }
@@ -37,8 +37,8 @@ public class userinput {
         return d;
     }
     
-    public Double max() {
-        Double de = Double.MIN_VALUE;
+    public Integer max() {
+        Integer de = Integer.MIN_VALUE;
         for (int i = 0; i < human.size(); i++) {
         de = Math.max(de, human.get(i));
     }
