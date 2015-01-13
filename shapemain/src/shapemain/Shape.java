@@ -10,5 +10,13 @@ package shapemain;
  * @author Jose
  */
 public class Shape {
-    
+
+    public double getarea() {
+        return 0;
+    }
+
+    public double getperimeter() {
+        return 0;
+    }
+
 }
