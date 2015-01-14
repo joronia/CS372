@@ -19,14 +19,14 @@ public class eventcalander {
     ArrayList <event> Events = new ArrayList();
     
    
-   public void addevents() {
+   public void addevents(event c) {
 //       Events.add(_name);
 //       Events.add(_location);
 //       Events.add(_month);
 //       Events.add(_date);
 //       Events.add(_year);
        
-       Events.add(new event("0","0","0","0","0"));
+       Events.add(c);
       
    }
    
@@ -35,14 +35,14 @@ public class eventcalander {
        File f = new File("C:\\Users\\joronia17\\Documents\\GitHub\\CS372\\EventManager\\Events.txt");
        BufferedWriter wrtr = new BufferedWriter(new FileWriter(f,true));
       
-       for (int i = 0; i < Events.size(); i++) {
-           wrtr.write(Events.get(i).getname());
-           wrtr.write(Events.get(i).getlocation());
-           wrtr.write(Events.get(i).getmonth());
-           wrtr.write(Events.get(i).getdate());
-           wrtr.write(Events.get(i).getyear());
+       //for (int i = 0; i < 1; i++) {
+           wrtr.write(Events.get(0).getname());
+           wrtr.write(Events.get(0).getlocation());
+           wrtr.write(Events.get(0).getmonth());
+           wrtr.write(Events.get(0).getdate());
+           wrtr.write(Events.get(0).getyear());
            wrtr.newLine();
-       }
+       //}
        wrtr.newLine();
        wrtr.close();
        }
