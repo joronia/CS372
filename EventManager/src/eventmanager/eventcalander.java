@@ -16,73 +16,31 @@ import java.util.*;
  * @author joronia17
  */
 public class eventcalander {
-    ArrayList <String> Events = new ArrayList();
-    String _name, _location, _month,_date,_year;
-   public eventcalander(String name, String location,String month,String date,String year) {
-       setname(name);
-       setlocation(location);
-       setmonth(month);
-       setdate(date);
-       setyear(year);
-   }
+    ArrayList <event> Events = new ArrayList();
+    
    
-   public void setname(String name) {
-       _name = name;
-   }
-   
-   public void setlocation(String location) {
-       _location = location;
-   }
-   
-   public void setmonth(String month) {
-       _month = month;
-   }
-   
-   public void setdate(String date) {
-       _date = date;
-   }
-   
-   public void setyear(String year) {
-       _year = year;
-   }
-   
-   public String getname() {
-       return _name;
-   }
-   
-   public String getlocation() {
-       return _location;
-   }
-   
-   public String getmonth() {
-       return _month;
-   }
-   
-   public String getdate() {
-       return _date;
-   }
-   
-   public String getyear() {
-       return _year;
-   }
-   
-   public ArrayList <String> addevents() {
-       Events.add(_name);
-       Events.add(_location);
-       Events.add(_month);
-       Events.add(_date);
-       Events.add(_year);
+   public void addevents() {
+//       Events.add(_name);
+//       Events.add(_location);
+//       Events.add(_month);
+//       Events.add(_date);
+//       Events.add(_year);
        
-       return Events;
+       Events.add(new event("0","0","0","0","0"));
+      
    }
    
    public void addtofile() {
        try {
-       File f = new File("Events.txt");
+       File f = new File("C:\\Users\\joronia17\\Documents\\GitHub\\CS372\\EventManager\\Events.txt");
        BufferedWriter wrtr = new BufferedWriter(new FileWriter(f,true));
       
        for (int i = 0; i < Events.size(); i++) {
-           wrtr.write(Events.get(i));
+           wrtr.write(Events.get(i).getname());
+           wrtr.write(Events.get(i).getlocation());
+           wrtr.write(Events.get(i).getmonth());
+           wrtr.write(Events.get(i).getdate());
+           wrtr.write(Events.get(i).getyear());
            wrtr.newLine();
        }
        wrtr.newLine();

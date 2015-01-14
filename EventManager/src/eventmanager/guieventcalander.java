@@ -11,7 +11,7 @@ package eventmanager;
  * @author joronia17
  */
 public class guieventcalander extends javax.swing.JFrame {
-eventcalander j = new eventcalander("0","0","0","0","0"); 
+event j = new event("0","0","0","0","0"); 
     /**
      * Creates new form guieventcalander
      */
@@ -61,12 +61,32 @@ eventcalander j = new eventcalander("0","0","0","0","0");
         });
 
         locationenter.setText("Enter");
+        locationenter.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                locationenterActionPerformed(evt);
+            }
+        });
 
         monthenter.setText("Enter");
+        monthenter.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                monthenterActionPerformed(evt);
+            }
+        });
 
         dateenter.setText("Enter");
+        dateenter.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dateenterActionPerformed(evt);
+            }
+        });
 
         yearenter.setText("Enter");
+        yearenter.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                yearenterActionPerformed(evt);
+            }
+        });
 
         jList1.setModel(new javax.swing.AbstractListModel() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
@@ -82,37 +102,33 @@ eventcalander j = new eventcalander("0","0","0","0","0");
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addGap(22, 22, 22)
+                        .addComponent(eventname, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(evententer)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(month, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(monthenter)
-                        .addGap(22, 22, 22))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addContainerGap()
-                                    .addComponent(year, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(yearenter))
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                    .addGap(12, 12, 12)
-                                    .addComponent(date, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(dateenter)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(eventname, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(month, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(evententer)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(location, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(locationenter)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 212, Short.MAX_VALUE)
+                                .addComponent(monthenter))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(location, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(locationenter))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                    .addComponent(year)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(yearenter))
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                    .addComponent(date, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(dateenter))))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 211, Short.MAX_VALUE)
                 .addGap(18, 18, 18))
         );
         layout.setVerticalGroup(
@@ -152,8 +168,32 @@ eventcalander j = new eventcalander("0","0","0","0","0");
     private void evententerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_evententerActionPerformed
         String f = (this.eventname.getText());
         j.setname(f);
-        j.addevents();
+        
     }//GEN-LAST:event_evententerActionPerformed
+
+    private void locationenterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_locationenterActionPerformed
+        String g = (this.location.getText());
+        j.setlocation(g);
+        
+    }//GEN-LAST:event_locationenterActionPerformed
+
+    private void monthenterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_monthenterActionPerformed
+        String a = (this.month.getText());
+        j.setmonth(a);
+        
+    }//GEN-LAST:event_monthenterActionPerformed
+
+    private void dateenterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dateenterActionPerformed
+        String b = (this.month.getText());
+        j.setdate(b);
+        
+    }//GEN-LAST:event_dateenterActionPerformed
+
+    private void yearenterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_yearenterActionPerformed
+        String c = (this.year.getText());
+        j.setyear(c);
+        
+    }//GEN-LAST:event_yearenterActionPerformed
 
     /**
      * @param args the command line arguments
