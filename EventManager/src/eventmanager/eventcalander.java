@@ -5,8 +5,10 @@
  */
 
 package eventmanager;
+import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.util.*;
 /**
@@ -17,10 +19,30 @@ public class eventcalander {
     ArrayList <String> Events = new ArrayList();
     String _name, _location, _month,_date,_year;
    public eventcalander(String name, String location,String month,String date,String year) {
+       setname(name);
+       setlocation(location);
+       setmonth(month);
+       setdate(date);
+       setyear(year);
+   }
+   
+   public void setname(String name) {
        _name = name;
+   }
+   
+   public void setlocation(String location) {
        _location = location;
+   }
+   
+   public void setmonth(String month) {
        _month = month;
+   }
+   
+   public void setdate(String date) {
        _date = date;
+   }
+   
+   public void setyear(String year) {
        _year = year;
    }
    
@@ -71,5 +93,21 @@ public class eventcalander {
                }
    }
     
+   public void readfromfile() {
+    try {
+    File F = new File("Events.txt");
+    BufferedReader rdr = new BufferedReader(new FileReader(F));
+    String line;
+    while ((line = rdr.readLine()) != null) {
+        System.out.print(line);
+        rdr.close();
+    }
+}
+    catch (Exception ex) {
+        System.out.println("Something did not go right!");
+    }
+    
+   }
 }
 
+  
