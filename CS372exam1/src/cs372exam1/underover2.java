@@ -115,16 +115,19 @@ public class underover2 {
 
             user = player.get(0).getmoney();
             user += bank * 2;
+
             System.out.println("You Won");
 
         } else if (_guess == dicetotal) {
             int bank = _bet;
             user = player.get(0).getmoney();
-            user += bank * 5;
+            user += bank * 4;
+
             System.out.print("You won");
         } else {
             user = player.get(0).getmoney();
             user -= _bet;
+
             System.out.print("You Lost");
         }
         return user;
