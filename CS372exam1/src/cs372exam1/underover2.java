@@ -96,7 +96,7 @@ public class underover2 {
         int dice2 = dice.nextInt(6);
         //int dicetotal = 0;
 
-        dicetotal += dice1 + dice2;
+        dicetotal = dice1 + dice2;
 
         return dicetotal;
     }
