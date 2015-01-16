@@ -60,4 +60,8 @@ public class event {
    public String getyear() {
        return _year;
    }
+   
+   public String toString() {
+       return "Event name: " +_name + "," +  _location + "," +  _month + "," + _year;
+   }
 }

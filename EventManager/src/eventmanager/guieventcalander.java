@@ -6,7 +6,8 @@
 
 package eventmanager;
 
-import java.util.ArrayList;
+
+
 import javax.swing.DefaultListModel;
 
 /**
@@ -46,6 +47,7 @@ eventcalander f = new eventcalander();
         jButton1 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jList1 = new javax.swing.JList();
+        viewevents = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -117,22 +119,26 @@ eventcalander f = new eventcalander();
                 f.addevents(e); 
             }
             @Override
-            public void add(int i, event e) { 
+            public void add(int i,event e) { 
                 super.add(i, e); 
-                f.addevents(e); 
+                f.addevents(e);
+
             }
 
         });
         jScrollPane1.setViewportView(jList1);
 
+        viewevents.setText("View Events");
+        viewevents.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                vieweventsActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(46, 46, 46)
-                .addComponent(jButton1)
-                .addGap(472, 472, 472))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(date, javax.swing.GroupLayout.Alignment.TRAILING)
@@ -144,7 +150,7 @@ eventcalander f = new eventcalander();
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(location, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, Short.MAX_VALUE))
-                            .addComponent(eventname))))
+                            .addComponent(eventname, javax.swing.GroupLayout.Alignment.TRAILING))))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -158,6 +164,12 @@ eventcalander f = new eventcalander();
                 .addGap(57, 57, 57)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 367, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(42, 42, 42))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addGap(145, 145, 145)
+                .addComponent(viewevents, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(144, 144, 144))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -185,8 +197,13 @@ eventcalander f = new eventcalander();
                             .addComponent(year, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(yearenter)))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(41, 41, 41)
-                .addComponent(jButton1)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(41, 41, 41)
+                        .addComponent(jButton1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(viewevents, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(205, Short.MAX_VALUE))
         );
 
@@ -224,15 +241,17 @@ eventcalander f = new eventcalander();
     }//GEN-LAST:event_yearenterActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        f.addevents(j);
         f.addtofile();
-        
         ((DefaultListModel<event>)jList1.getModel()).addElement(j);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void eventnameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eventnameActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_eventnameActionPerformed
+
+    private void vieweventsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_vieweventsActionPerformed
+        //((DefaultListModel<event>)jList1.getModel()).addElement(j);
+    }//GEN-LAST:event_vieweventsActionPerformed
 
     /**
      * @param args the command line arguments
@@ -281,6 +300,7 @@ eventcalander f = new eventcalander();
     private javax.swing.JButton locationenter;
     private javax.swing.JTextField month;
     private javax.swing.JButton monthenter;
+    private javax.swing.JButton viewevents;
     private javax.swing.JTextField year;
     private javax.swing.JButton yearenter;
     // End of variables declaration//GEN-END:variables
