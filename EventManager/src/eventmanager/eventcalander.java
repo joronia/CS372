@@ -18,6 +18,8 @@ import java.util.*;
 public class eventcalander {
     ArrayList <event> Events = new ArrayList();
     
+    public int getSize()  { return Events.size(); }
+    public event getElement(int i) { return Events.get(i); }
    
    public void addevents(event c) {
 //       Events.add(_name);
