@@ -42,7 +42,12 @@ public class eventcalander {
         Events.add(c);
 
     }
-
+public void locationsort() {
+    Events.sort(event.LocationCompartor);
+} 
+public void datesort() {
+    Events.sort(event.DateComparator);
+}
     public void addtofile() {
         try {
             //File f = new File("C:\\Users\\joronia17\\Documents\\GitHub\\CS372\\EventManager\\Events.txt");

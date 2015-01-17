@@ -6,6 +6,7 @@
 package eventmanager;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 
 /**
  *
@@ -81,7 +82,7 @@ public class event {
             try {
 
                 int d = Integer.parseInt(_date);
-            } catch (Exception ex) {
+           } catch (Exception ex) {
                 throw new IllegalArgumentException("Your date needs to be an int");
             }
         }
@@ -120,4 +121,34 @@ public class event {
     public String toString() {
         return "Event: " + _name + "|" + _location + "|" + _month + "|" + _date + "|" + _year;
     }
+     public static Comparator<event> LocationCompartor = new Comparator<event>() {
+            
+        @Override
+        public int compare(event e1, event e2) {
+            int cmp = e1.getlocation().compareTo(e2.getlocation());
+            return cmp;
+            
+            
+        }
+   };
+     
+     public static Comparator<event> DateComparator = new Comparator<event>() {
+
+        @Override
+        public int compare(event b1, event b2) {
+            int cmp1 = b1.getdate().compareTo(b2.getdate());
+            return cmp1;
+        }
+         
+     };
+     
+     public static Comparator<event> NameComparator = new Comparator<event>() {
+
+        @Override
+        public int compare(event c1, event c2) {
+            int cmp2 = c1.getname().compareTo(c2.getname());
+            return cmp2;
+        }
+         
+     };
 }
