@@ -3,18 +3,21 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.util.*;
+
 /**
  *
  * @author Jose
  */
 public class GuiRestaurant extends javax.swing.JFrame {
-ArrayList <restaurant> places = new ArrayList();
+
+    ArrayList<restaurant> places = new ArrayList();
 
     /**
      * Creates new form GuiRestaurant
@@ -22,8 +25,21 @@ ArrayList <restaurant> places = new ArrayList();
     public GuiRestaurant() {
         initComponents();
     }
-    
-    
+
+    public void showrates() {
+        File i = new File("Restaurants.txt");
+        try {
+            BufferedReader rdr = new BufferedReader(new FileReader(i));
+            String line;
+            while ((line = rdr.readLine()) != null) {
+                jTextArea1.append(line + "\n");
+
+            }
+            rdr.close();
+        } catch (Exception t) {
+            System.out.print("Opps");
+        }
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -45,7 +61,7 @@ ArrayList <restaurant> places = new ArrayList();
         jLabel4 = new javax.swing.JLabel();
         previews = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jList1 = new javax.swing.JList();
+        jTextArea1 = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -62,7 +78,7 @@ ArrayList <restaurant> places = new ArrayList();
             }
         });
 
-        jLabel1.setText("Rating");
+        jLabel1.setText("5 Star Rating");
 
         jLabel2.setText("Notes about Restaurant");
 
@@ -78,7 +94,9 @@ ArrayList <restaurant> places = new ArrayList();
             }
         });
 
-        jScrollPane1.setViewportView(jList1);
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jScrollPane1.setViewportView(jTextArea1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -86,12 +104,6 @@ ArrayList <restaurant> places = new ArrayList();
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(55, 55, 55)
-                        .addComponent(rsubmit)
-                        .addGap(55, 55, 55)
-                        .addComponent(previews, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 19, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -104,16 +116,21 @@ ArrayList <restaurant> places = new ArrayList();
                                 .addComponent(notes, javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(rating, javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 95, Short.MAX_VALUE)))
-                        .addGap(28, 28, 28)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)))
-                .addContainerGap())
+                        .addGap(17, 17, 17)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(55, 55, 55)
+                        .addComponent(rsubmit)
+                        .addGap(55, 55, 55)
+                        .addComponent(previews, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(29, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(23, Short.MAX_VALUE)
+                .addContainerGap(37, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                    .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel4)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(name, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -121,15 +138,15 @@ ArrayList <restaurant> places = new ArrayList();
                         .addComponent(jLabel3)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(address, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel2))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(notes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(rating, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(16, 16, 16)
+                        .addComponent(jLabel2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(notes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(rating, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(rsubmit)
@@ -145,17 +162,18 @@ ArrayList <restaurant> places = new ArrayList();
     }//GEN-LAST:event_addressActionPerformed
 
     private void rsubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rsubmitActionPerformed
-        int rate = Integer.parseInt(rating.getText());
-        restaurant b = new restaurant(name.getText(),address.getText(),notes.getText(),rate);
+    try {    int rate = Integer.parseInt(rating.getText());
+        restaurant b = new restaurant(name.getText(), address.getText(), notes.getText(), rate);
         places.add(b);
-         File f = new File("Restaurants.txt");
+    
+        File f = new File("Restaurants.txt");
         try {
-            BufferedWriter wrtr = new BufferedWriter(new FileWriter(f,true));
+            BufferedWriter wrtr = new BufferedWriter(new FileWriter(f, true));
             for (restaurant place : places) {
-                wrtr.write(b.toString());
+                b.toString();
                 wrtr.newLine();
             }
-                wrtr.close();
+            wrtr.close();
         } catch (Exception ex) {
             System.out.println("Oops");
         }
@@ -163,21 +181,31 @@ ArrayList <restaurant> places = new ArrayList();
         address.setText("");
         notes.setText("");
         rating.setText("");
+    } catch (Exception ex) {
+        System.out.printf("Can't add Review needs to be an number for rating",ex.getMessage());
+     
+    }
     }//GEN-LAST:event_rsubmitActionPerformed
 
     private void previewsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_previewsActionPerformed
-        File g = new File("Restaurants.txt");
-        try {
-            BufferedReader rdr = new BufferedReader(new FileReader(g));
-            String line;
-            while ((line = rdr.readLine()) != null) {
-                System.out.println(line);
-            }
-            rdr.close();
-        } catch (Exception t) {
-            System.out.print("Opps");
-        }
-        
+//        JFileChooser chooser = new JFileChooser();
+//        chooser.showOpenDialog(null);
+//        File t = chooser.getSelectedFile();
+//        String filename = t.getAbsolutePath();
+//        
+//        
+//        try {
+//            FileReader reader = new FileReader(filename);
+//            BufferedReader br = new BufferedReader(reader);
+//            jTextArea1.read(br, null);
+//            br.close();
+//            jTextArea1.requestFocus();
+//        } catch (Exception e) {
+//           System.out.print(filename);
+//        }
+
+        showrates();
+
     }//GEN-LAST:event_previewsActionPerformed
 
     /**
@@ -221,8 +249,8 @@ ArrayList <restaurant> places = new ArrayList();
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JList jList1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField name;
     private javax.swing.JTextField notes;
     private javax.swing.JButton previews;

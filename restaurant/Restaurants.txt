@@ -1,6 +1,15 @@
+Jose
+2014 Spruce st.
+good
+5
 
-4,4,3,5
-g,g,g,3
-g,g,g,3
-g,g,g,3
-g,g,g,4
+subway
+2014
+7
+3
+
+subway
+2014
+7
+3
+
