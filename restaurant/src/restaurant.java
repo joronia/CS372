@@ -1,3 +1,6 @@
+
+import java.io.File;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -22,6 +25,7 @@ public class restaurant {
     public String getaddress() { return _address; }
     public String getnotes() { return _notes; }
     public int getrating() { return _rating; }
+    
     
     public String toString() {
         return _name + "," + _address + "," + _notes + "," + _rating;
