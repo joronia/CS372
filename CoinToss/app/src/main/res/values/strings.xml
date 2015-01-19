@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Coin Toss</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="cointoss">Coin Toss</string>
+    <string name="cointoss1">Result of coin toss</string>
+    <string name="button">New Button</string>
+    <string name="tossgame">Click Here for Coin Toss</string>
+    <string name="results">Toss Coin</string>
+
+</resources>
