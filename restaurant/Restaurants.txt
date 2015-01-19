@@ -1,15 +1,4 @@
-Jose
-2014 Spruce st.
-good
-5
-
-subway
-2014
-7
-3
-
-subway
-2014
-7
-3
-
+dfgfgd,fdgd,dgdg,2
+Subway,408 sharon,good,3
+Pizza Hut,508 Nevada Ave,okay,3
+Name:Red Robin Address:403 Nevada St. Notes:very good Rating:3

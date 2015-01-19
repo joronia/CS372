@@ -25,7 +25,9 @@ public class GuiRestaurant extends javax.swing.JFrame {
     public GuiRestaurant() {
         initComponents();
     }
-
+/**
+ * Read from file
+ */
     public void showrates() {
         File i = new File("Restaurants.txt");
         try {
@@ -162,29 +164,30 @@ public class GuiRestaurant extends javax.swing.JFrame {
     }//GEN-LAST:event_addressActionPerformed
 
     private void rsubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rsubmitActionPerformed
-    try {    int rate = Integer.parseInt(rating.getText());
-        restaurant b = new restaurant(name.getText(), address.getText(), notes.getText(), rate);
-        places.add(b);
-    
-        File f = new File("Restaurants.txt");
         try {
-            BufferedWriter wrtr = new BufferedWriter(new FileWriter(f, true));
-            for (restaurant place : places) {
-                b.toString();
+            int rate = Integer.parseInt(rating.getText());
+            restaurant b = new restaurant(name.getText(), address.getText(), notes.getText(), rate);
+            places.add(b);
+
+            File f = new File("Restaurants.txt");
+            try {
+                BufferedWriter wrtr = new BufferedWriter(new FileWriter(f,true));
+
+                wrtr.append(b.toString());
                 wrtr.newLine();
+
+                wrtr.close();
+            } catch (Exception ex) {
+                System.out.println("Oops");
             }
-            wrtr.close();
+            name.setText("");
+            address.setText("");
+            notes.setText("");
+            rating.setText("");
         } catch (Exception ex) {
-            System.out.println("Oops");
+            System.out.printf("Can't add Review needs to be an number for rating", ex.getMessage());
+
         }
-        name.setText("");
-        address.setText("");
-        notes.setText("");
-        rating.setText("");
-    } catch (Exception ex) {
-        System.out.printf("Can't add Review needs to be an number for rating",ex.getMessage());
-     
-    }
     }//GEN-LAST:event_rsubmitActionPerformed
 
     private void previewsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_previewsActionPerformed
