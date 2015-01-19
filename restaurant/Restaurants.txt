@@ -2,3 +2,4 @@ dfgfgd,fdgd,dgdg,2
 Subway,408 sharon,good,3
 Pizza Hut,508 Nevada Ave,okay,3
 Name:Red Robin Address:403 Nevada St. Notes:very good Rating:3
+Name:Jack Hop Address:403 Nevada Ave. Notes:Very Good! Rating:3
