@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-
-    <string name="app_name">Coinflip</string>
-    <string name="hello_world">Coin Toss!</string>
-    <string name="action_settings">Settings</string>
-    <string name="coinbutton">New Button</string>
-
-</resources>
