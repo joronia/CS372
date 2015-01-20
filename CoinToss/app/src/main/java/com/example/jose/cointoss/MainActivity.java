@@ -11,11 +11,12 @@ import java.util.Random;
 
 
 public class MainActivity extends ActionBarActivity {
-    TextView myAwesomeTextView = (TextView) findViewById(R.id.cointoss);
+    TextView myAwesomeTextView = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        myAwesomeTextView = (TextView) findViewById(R.id.cointoss);
     }
 
 
@@ -41,7 +42,7 @@ public class MainActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void cointossgame() {
+    public void cointossgame(View v) {
         Random coin = new Random();
         int result = coin.nextInt(2);
 

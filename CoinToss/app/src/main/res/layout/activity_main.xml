@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:text="@string/results"
         android:id="@+id/button"
-        android:onClick="toggleLabel"
+        android:onClick="cointossgame"
         android:layout_below="@+id/cointoss"
         android:layout_toRightOf="@+id/cointoss"
         android:layout_toEndOf="@+id/cointoss"
