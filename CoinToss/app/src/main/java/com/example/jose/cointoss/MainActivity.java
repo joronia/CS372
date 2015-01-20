@@ -4,6 +4,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 
 import java.util.Random;
@@ -47,5 +48,12 @@ public class MainActivity extends ActionBarActivity {
         if (result == 1) {
             myAwesomeTextView.setText("It is tails!");
         } else myAwesomeTextView.setText("It is Heads!");
+    }
+
+    public void toggleLabel(View v) {
+        TextView f = (TextView)this.findViewById(R.id.cointoss);
+        int visible = f.getVisibility() == View.VISIBLE ?
+                View.INVISIBLE : View.VISIBLE;
+        f.setVisibility(visible);
     }
 }
