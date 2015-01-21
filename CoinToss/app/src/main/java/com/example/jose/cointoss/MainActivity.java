@@ -11,6 +11,7 @@ import java.util.Random;
 
 
 public class MainActivity extends ActionBarActivity {
+    //setting textview to null.
     TextView myAwesomeTextView = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +43,10 @@ public class MainActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    /**
+     * function to get heads or tails.
+     * @param v
+     */
     public void cointossgame(View v) {
         Random coin = new Random();
         int result = coin.nextInt(2);
@@ -51,6 +56,10 @@ public class MainActivity extends ActionBarActivity {
         } else myAwesomeTextView.setText("It is Heads!");
     }
 
+    /**
+     * Class example.
+     * @param v
+     */
     public void toggleLabel(View v) {
         TextView f = (TextView)this.findViewById(R.id.cointoss);
         int visible = f.getVisibility() == View.VISIBLE ?
