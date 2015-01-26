@@ -101,6 +101,7 @@ public void namesort() {
             File F = new File("Events.txt");
             BufferedReader rdr = new BufferedReader(new FileReader(F));
             String line;
+            //PT -- this doesn't actually add the events to the calendar. -5
             while ((line = rdr.readLine()) != null) {
                 System.out.println(line);
 

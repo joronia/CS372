@@ -29,6 +29,7 @@ public class PR3_1 {
             double b = n.average();
             System.out.println("The average for you're numbers are: " + b);
         } catch (Exception ex) {
+            //PT -- Better to let the user retry entering an integer, rather than exiting the program. -3
             System.out.printf("Has to be a interger!",
                     ex.getMessage());
         }

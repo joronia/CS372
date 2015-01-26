@@ -15,6 +15,8 @@ import java.util.Comparator;
 public class event {
 // Initializing variables.
     private String _name, _location, _month, _date, _year;
+    //PT -- I'm not sure why you need this array list. The menber variables store ths same data,
+    // and using those will be more maintainable than the arraylist. -5
     public ArrayList<String> values = new ArrayList();
 // An extra empty constructor.
     public event() {
