@@ -16,7 +16,7 @@ import java.util.*;
  * @author Jose
  */
 public class GuiRestaurant extends javax.swing.JFrame {
-
+//PT -- you don't really use this, and I would rather you did. Ideally, you have a RestaurantManager class that manages the list of restaurants
     ArrayList<restaurant> places = new ArrayList();
 
     /**
