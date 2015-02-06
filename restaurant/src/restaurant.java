@@ -26,7 +26,7 @@ public class restaurant {
     _name = name;
     _address = address;
     _notes = notes;
-    _rating = rating;
+    _rating = rating; //PT -- check that rating is in [1,5]
 }
     /**
      * All these methods are to return the name,address,notes,and rating to see the actual string.
